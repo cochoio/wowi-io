@@ -5,6 +5,8 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "dev": "npx lerna run dev --parallel"
+    "dev": "npx lerna run dev --parallel",
+    "build": "npx lerna run build --parallel",
+    "start": "npx lerna run start --parallel"
   }
 }

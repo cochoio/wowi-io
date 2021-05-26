@@ -3,6 +3,7 @@
     "lib": ["es5", "es6", "DOM"],
     "target": "es5",
     "module": "commonjs",
+    "outDir": "dist",
     "strict": false,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "Node",

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="/dist/index.iife.js"></script>
+    <script defer>
+      const wow = new wowIO({
+        onChange: (snapshot) => {
+          console.log(snapshot);
+
+          if (snapshot.type === "Dispatch") {
+            document.getElementById("user_count").innerText =
+              snapshot.subscribers.length;
+          }
+        },
+      });
+
+      console.log("wow", wow);
+    </script>
+  </head>
+  <body>
+    이거슨 정말 노올랍고 좋은 사이트 이 사이트는 현재
+    <p id="user_count">0</p>
+    명이 보고 있습니다.
+  </body>
+</html>

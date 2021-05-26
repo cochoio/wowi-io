@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "es6", "DOM"],
+    "target": "es5",
+    "module": "commonjs",
+    "strict": false,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "Node",
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true
+  },
+  "include": ["src/**/*"]
+}

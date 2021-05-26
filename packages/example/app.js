@@ -1,0 +1,1 @@
+../sdk/dist/index.umd.js

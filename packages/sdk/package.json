@@ -1,12 +1,11 @@
 {
-  "name": "wowi.js",
-  "version": "1.0.1",
+  "name": "wowi",
+  "version": "0.0.1-rc",
   "license": "MIT",
   "main": "dist/index.es.js",
   "scripts": {
     "dev": "nodemon",
-    "build": "rollup -c",
-    "postinstall": "sort-package-json"
+    "build": "rollup -c"
   },
   "husky": {
     "hooks": {

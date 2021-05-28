@@ -1,5 +1,4 @@
-import fastify, { FastifyPluginAsync } from "fastify";
-import WebSocket from "ws";
+import { FastifyPluginAsync } from "fastify";
 import { isAction } from "../lib/websocket/receiver";
 import Session from "../session/Session";
 

@@ -1,8 +1,7 @@
-node_modules
-yarn.lock
-dist
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+deploy.zip

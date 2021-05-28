@@ -1,0 +1,5 @@
+version: "3.7"
+
+services:
+  wowi:
+    image: 676084870440.dkr.ecr.ap-northeast-2.amazonaws.com/wowi

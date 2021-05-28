@@ -1,8 +1,9 @@
 {
   "name": "wowi",
-  "version": "0.0.1-rc2",
+  "version": "0.0.1-rc3",
   "license": "MIT",
   "main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "nodemon",
     "build": "rollup -c"

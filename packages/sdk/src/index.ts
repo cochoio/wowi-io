@@ -1,12 +1,23 @@
 import _ from "lodash";
 
+export type Connection = {
+  id: string;
+  token: string;
+  page: string;
+};
+
+export type DispatchType = {
+  type: "Dispatch";
+  subscribers: Connection[];
+};
+
 export interface Option {
   page?: string;
   type?: "SetPage" | "GetUsers";
-  onChange: (snapshot: any) => void;
+  onChange: (snapshot: DispatchType) => void;
 }
 
-let LIVE_SERVER = "ws://live.alleyverd.com/ws";
+let LIVE_SERVER = "wss://live.alleyverd.com/ws";
 // LIVE_SERVER = `ws://localhost:5000/ws`;
 
 class wowi {

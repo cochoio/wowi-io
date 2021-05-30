@@ -3,6 +3,7 @@ import fastify from "fastify";
 import autoLoad from "fastify-autoload";
 import fastifyCookie from "fastify-cookie";
 import path from "path";
+
 const app = fastify();
 
 const port = process.env.PORT || 5000;

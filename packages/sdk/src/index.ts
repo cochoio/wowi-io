@@ -6,20 +6,28 @@ export interface Option {
   onChange: (snapshot: any) => void;
 }
 
-class Wowi {
+let LIVE_SERVER = "ws://live.alleyverd.com/ws";
+// LIVE_SERVER = `ws://localhost:5000/ws`;
+
+class wowi {
   private $ws: WebSocket;
   private $option: Option;
 
   constructor(option: Option) {
     this.$option = option;
 
-    this.$ws = new WebSocket("ws://localhost:3001/ws");
+    console.log("Socket Connect => ");
+    this.$ws = new WebSocket(LIVE_SERVER);
 
     this.$ws.onopen = (event) => {
+      console.log("Logging event", event);
       this.setPage(window.location.href);
     };
 
+    this.$ws.onerror = (err) => console.log(err);
+
     this.$ws.onmessage = (message) => {
+      console.log("messaeg", message);
       this.$option.onChange(JSON.parse(message.data));
     };
   }
@@ -56,4 +64,4 @@ class Wowi {
   }
 }
 
-export default Wowi;
+export default wowi;

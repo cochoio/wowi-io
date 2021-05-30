@@ -1,9 +1,9 @@
-import crypto, { createHmac } from "crypto";
-import WebSocket from "ws";
-import { IReceiver } from "../lib/websocket/receiver";
-import subscription from "../lib/redis/subscription";
-import { pusher } from "../lib/redis/redisClient";
+import { createHmac } from "crypto";
 import _ from "lodash";
+import * as uuid from "uuid";
+import WebSocket from "ws";
+import subscription from "../lib/redis/subscription";
+import { IReceiver } from "../lib/websocket/receiver";
 
 const { SESSION_SECRET_KEY } = process.env;
 
@@ -14,7 +14,7 @@ class Session {
   private currentPage: string;
 
   constructor(socket: WebSocket) {
-    this.id = crypto.randomUUID();
+    this.id = uuid.v4();
     this.socket = socket;
 
     try {

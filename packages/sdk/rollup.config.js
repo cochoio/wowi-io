@@ -17,21 +17,17 @@ const globals = {
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 const external = [];
 
-const formats = [
-  `iife`,
-  // `umd`,
-];
+const formats = [`iife`, "es"];
 
 export default formats.map((format) => ({
   input: "./src/index.ts",
   output: {
-    // file: `dist/${pkg.name}.${format}.js`,
     format,
     file: `dist/index.${format}.js`,
-    // exports: "auto",
+    exports: "auto",
     sourcemap: false,
     globals,
-    name: "wowIO",
+    name: "wowi",
     preserveModules: format === "cjs",
     extend: true,
   },

@@ -39,13 +39,18 @@
   },
   "scripts": {
     "dev": "npx lerna run dev --parallel",
-    "build": "npx lerna run build --parallel",
+    "prebuild": "npx lerna run build --parallel --scope=wowi",
+    "build": "npx lerna run build --parallel --ignore wowi",
     "start": "npx lerna run start --parallel",
-    "build:socket-server": "yarn build --scope=socket-engine"
+    "build:socket-server": "yarn build --scope=socket-engine",
+    "start:socket-server": "npx lerna run start --parallel --scope=@wowi/site"
   },
   "dependencies": {
     "@wowi/site": "file:packages/www",
-    "socket-engine": "file:packages/socket-engine",
-    "wowi": "file:packages/sdk"
-  }
+    "@wowi/socket-engine": "file:packages/socket-engine",
+    "@wowi/wowi": "file:packages/sdk"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
